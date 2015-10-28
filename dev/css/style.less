@@ -1,3 +1,6 @@
+@shadow: 0 2px 5px rgba(0, 0, 0, 0.47);
+@color: #34c6f4;
+
 
 body {
   margin: 0;
@@ -14,6 +17,13 @@ ul {
 
 }
 
+a {
+  color: #fff;
+  &:hover {
+    color: @color;
+  }
+}
+
 
 header {
   background: #2f2f2f url(../../tpl/img/hexellence.png);
@@ -22,7 +32,7 @@ header {
     padding: 10px;
     background: #7f7f7f;
     color: #313030;
-    box-shadow: 0 2px 5px #000;
+    box-shadow: @shadow;
     ul {
       overflow: hidden;
       display: flex;
@@ -62,7 +72,7 @@ header {
   background: #484848;
   width: 100%;
   border-top: 3px solid #fff;
-  box-shadow: 0 2px 5px #000;
+  box-shadow: @shadow;
   ul {
     display: flex;
     width: 100%;
@@ -80,14 +90,14 @@ header {
         padding: 15px 0 12px;
         display: block;
         &:hover {
-          color: #34c6f4;
+          color: @color;
         }
       }
       &:before {
         content: '';
         width: 50%;
         height: 3px;
-        background: #34c6f4;
+        background: @color;
         display: block;
         position: absolute;
         top: 0;
@@ -98,7 +108,7 @@ header {
         content: '';
         width: 50%;
         height: 3px;
-        background: #34c6f4;
+        background: @color;
         display: block;
         position: absolute;
         top: 0;
@@ -125,7 +135,7 @@ header {
           left: 50%;
         }
         a {
-          color: #34c6f4;
+          color: @color;
         }
         
       }
@@ -136,5 +146,156 @@ header {
         margin-right: 0;
       }
     }
+  }
+}
+
+.sidebar-left {
+  margin-top: 10px;
+  .side-menu {
+    li {
+      overflow: hidden;
+      position: relative;
+      display: block;
+      background: #313131;
+      &:before {
+        content: '';
+        background: @color;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        display: block;
+        height: 150px;
+        transition: all 0.4s;
+      }
+      &:hover {
+        &:before {
+          left: 0px;
+        }
+      }
+
+      a {
+        color: #fff;
+        position: relative;
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 300;
+        text-decoration: none;
+        letter-spacing: -1px;
+        width: 100%;
+        display: block;
+        padding: 10px;
+        padding-bottom: 13px;
+      }
+      &.active {
+        a {
+          background: @color;
+        }
+      }
+      margin-bottom: 5px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.main-block {
+  .title {
+    border-bottom: 1px solid #fff;
+    margin-bottom: 30px;
+    .h1 {
+      font-size: 20px;
+      color: @color;
+      letter-spacing: -1px;
+      font-weight: 300;
+      border-bottom: 1px solid @color;
+      position: relative;
+      bottom: -1px;
+      padding-bottom: 10px;
+      margin-bottom: 0;
+      display: inline-block;
+    }
+  }
+
+  .low-menu {
+    display: flex;
+    li {
+      margin: 0 auto;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+        margin-right: 0;
+      }
+      a {
+        line-height: 50px;
+        font-size: 16px;
+        background-image: url(../../tpl/img/sprite.png);
+        display: block;
+        float: left;
+        &.icon-coffee135:hover {
+          background-position: -1536px -352px;
+        }
+        &.icon-wallets3:hover {
+          background-position: -1536px -288px;
+        }
+        &.icon-cups17:hover {
+          background-position: -1536px -608px;
+        }
+        &.icon-shopping-3:hover {
+          background-position: -1536px -672px;
+        }
+        &.icon-note62:hover {
+          background-position: -1536px -480px;
+        }
+        &.icon-stars64:hover {
+          background-position: -1568px -704px;
+        }
+        &.icon-shopping-4:hover {
+          background-position: -1536px -704px;
+        }
+        &.icon-vehicle102:hover {
+          background-position: -1536px -384px;
+        }
+        &.icon-oil22:hover {
+          background-position: -1536px -512px;
+        }
+        &.icon-books91:hover {
+          background-position: -1568px -288px;
+        }
+        &.icon-speakers17:hover {
+          background-position: -1536px -768px;
+        }
+        &.icon-pictures28:hover {
+          background-position: -1568px -544px;
+        }
+        &.icon-automobile10:hover {
+          background-position: -1536px -416px;
+        }
+
+      }
+    }
+  }
+}
+
+.ui-tooltip {
+  background: @color;
+  padding: 5px 10px;
+  position: absolute;
+  z-index: 9999;
+  max-width: 300px;
+  &:before {
+    content: '';
+    position: absolute; /* Абсолютное позиционирование */
+    left: 10px; top: -10px; /* Положение треугольника */
+    border: 5px solid transparent; /* Прозрачные границы */
+    border-bottom: 5px solid @color; /* Добавляем треугольник */
+
+  }
+  .ui-tooltip-content {
+    color: #fff;
+    font-size: 16px;
   }
 }

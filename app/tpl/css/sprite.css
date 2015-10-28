@@ -9,25 +9,31 @@ Icon classes can be used entirely standalone. They are named after their origina
 <img class="icon-home" />
 ```
 */
-.icon-arrow395(3) {
+.icon-arrow395 {
   background-image: url(../img/sprite.png);
   background-position: -1536px -128px;
   width: 64px;
   height: 64px;
 }
-.icon-automobile10(1) {
+.icon-automobile10 {
   background-image: url(../img/sprite.png);
-  background-position: -1568px -384px;
+  background-position: -1536px -448px;
   width: 32px;
   height: 32px;
 }
-.icon-automobile10(2) {
+.icon-automobile101 {
   background-image: url(../img/sprite.png);
-  background-position: -1568px -320px;
+  background-position: -1536px -416px;
   width: 32px;
   height: 32px;
 }
-.icon-badges2 (4) {
+.icon-automobile11 {
+  background-image: url(../img/sprite.png);
+  background-position: -1568px -416px;
+  width: 32px;
+  height: 32px;
+}
+.icon-badges2 {
   background-image: url(../img/sprite.png);
   background-position: -1024px 0px;
   width: 512px;
@@ -35,25 +41,31 @@ Icon classes can be used entirely standalone. They are named after their origina
 }
 .icon-books91 {
   background-image: url(../img/sprite.png);
-  background-position: -1568px -544px;
+  background-position: -1568px -256px;
   width: 32px;
   height: 32px;
 }
-.icon-chain13(2) {
-  background-image: url(../img/sprite.png);
-  background-position: -1560px -608px;
-  width: 24px;
-  height: 24px;
-}
-.icon-coffee135(1) {
+.icon-books911 {
   background-image: url(../img/sprite.png);
   background-position: -1568px -288px;
   width: 32px;
   height: 32px;
 }
-.icon-cogwheels10(2) {
+.icon-chain13 {
   background-image: url(../img/sprite.png);
-  background-position: -1536px -320px;
+  background-position: -1560px -800px;
+  width: 24px;
+  height: 24px;
+}
+.icon-coffee135 {
+  background-image: url(../img/sprite.png);
+  background-position: -1568px -320px;
+  width: 32px;
+  height: 32px;
+}
+.icon-coffee1351 {
+  background-image: url(../img/sprite.png);
+  background-position: -1536px -352px;
   width: 32px;
   height: 32px;
 }
@@ -63,15 +75,21 @@ Icon classes can be used entirely standalone. They are named after their origina
   width: 512px;
   height: 512px;
 }
-.icon-cups17 {
+.icon-cogwheels11 {
   background-image: url(../img/sprite.png);
-  background-position: -1536px -416px;
+  background-position: -1568px -512px;
   width: 32px;
   height: 32px;
 }
-.icon-downloading22(1) {
+.icon-cups17 {
   background-image: url(../img/sprite.png);
-  background-position: -1568px -512px;
+  background-position: -1568px -576px;
+  width: 32px;
+  height: 32px;
+}
+.icon-cups171 {
+  background-image: url(../img/sprite.png);
+  background-position: -1536px -608px;
   width: 32px;
   height: 32px;
 }
@@ -81,111 +99,135 @@ Icon classes can be used entirely standalone. They are named after their origina
   width: 512px;
   height: 512px;
 }
-.icon-eyes31(2) {
+.icon-downloading23 {
+  background-image: url(../img/sprite.png);
+  background-position: -1536px -256px;
+  width: 32px;
+  height: 32px;
+}
+.icon-eyes31 {
   background-image: url(../img/sprite.png);
   background-position: -1536px 0px;
   width: 64px;
   height: 64px;
 }
-.icon-facebook2(1) {
+.icon-facebook2 {
   background-image: url(../img/sprite.png);
-  background-position: -1536px -608px;
+  background-position: -1536px -800px;
   width: 24px;
   height: 24px;
 }
 .icon-icq {
   background-image: url(../img/sprite.png);
-  background-position: -1536px -648px;
+  background-position: -1568px -848px;
   width: 16px;
   height: 16px;
 }
-.icon-insignia(1) {
+.icon-insignia {
   background-image: url(../img/sprite.png);
-  background-position: -1536px -288px;
+  background-position: -512px -512px;
+  width: 512px;
+  height: 512px;
+}
+.icon-insignia1 {
+  background-image: url(../img/sprite.png);
+  background-position: -1536px -320px;
   width: 32px;
   height: 32px;
 }
-.icon-insignia {
+.icon-lights7 {
   background-image: url(../img/sprite.png);
   background-position: 0px 0px;
   width: 512px;
   height: 512px;
 }
-.icon-lights7(2) {
+.icon-lights71 {
   background-image: url(../img/sprite.png);
   background-position: -1536px -64px;
   width: 64px;
   height: 64px;
 }
-.icon-lights7 {
-  background-image: url(../img/sprite.png);
-  background-position: -1024px -512px;
-  width: 512px;
-  height: 512px;
-}
 .icon-logo22 {
   background-image: url(../img/sprite.png);
-  background-position: -1584px -632px;
+  background-position: -1552px -848px;
   width: 16px;
   height: 16px;
 }
 .icon-mail {
   background-image: url(../img/sprite.png);
-  background-position: -1568px -632px;
+  background-position: -1536px -848px;
   width: 16px;
   height: 16px;
 }
 .icon-map {
   background-image: url(../img/sprite.png);
-  background-position: -1552px -632px;
+  background-position: -1576px -824px;
   width: 16px;
   height: 16px;
 }
-.icon-money379(1) {
+.icon-money371 {
   background-image: url(../img/sprite.png);
-  background-position: -1536px -544px;
+  background-position: -1568px -768px;
   width: 32px;
   height: 32px;
 }
 .icon-money379 {
   background-image: url(../img/sprite.png);
-  background-position: 0px -1024px;
+  background-position: -1024px -512px;
   width: 512px;
   height: 512px;
 }
 .icon-next21 {
   background-image: url(../img/sprite.png);
-  background-position: -1568px -576px;
+  background-position: -1536px -824px;
   width: 24px;
   height: 24px;
 }
-.icon-note62(2) {
-  background-image: url(../img/sprite.png);
-  background-position: -1536px -448px;
-  width: 32px;
-  height: 32px;
-}
-.icon-oil22(1) {
+.icon-note62 {
   background-image: url(../img/sprite.png);
   background-position: -1568px -448px;
   width: 32px;
   height: 32px;
 }
-.icon-phone {
+.icon-note621 {
   background-image: url(../img/sprite.png);
-  background-position: -1584px -608px;
-  width: 16px;
-  height: 16px;
+  background-position: -1536px -480px;
+  width: 32px;
+  height: 32px;
 }
-.icon-pictures28(1) {
+.icon-oil22 {
   background-image: url(../img/sprite.png);
   background-position: -1568px -480px;
   width: 32px;
   height: 32px;
 }
-.icon-radio12(1) {
+.icon-oil221 {
   background-image: url(../img/sprite.png);
   background-position: -1536px -512px;
+  width: 32px;
+  height: 32px;
+}
+.icon-phone {
+  background-image: url(../img/sprite.png);
+  background-position: -1560px -824px;
+  width: 16px;
+  height: 16px;
+}
+.icon-pictures28 {
+  background-image: url(../img/sprite.png);
+  background-position: -1536px -544px;
+  width: 32px;
+  height: 32px;
+}
+.icon-pictures281 {
+  background-image: url(../img/sprite.png);
+  background-position: -1568px -544px;
+  width: 32px;
+  height: 32px;
+}
+.icon-radio11 {
+  background-image: url(../img/sprite.png);
+  background-position: -1536px -576px;
   width: 32px;
   height: 32px;
 }
@@ -195,7 +237,7 @@ Icon classes can be used entirely standalone. They are named after their origina
   width: 512px;
   height: 512px;
 }
-.icon-ruble(2) {
+.icon-ruble {
   background-image: url(../img/sprite.png);
   background-position: -1024px -1024px;
   width: 512px;
@@ -209,67 +251,103 @@ Icon classes can be used entirely standalone. They are named after their origina
 }
 .icon-shopping-2 {
   background-image: url(../img/sprite.png);
-  background-position: -1536px -576px;
+  background-position: -1536px -640px;
   width: 32px;
   height: 32px;
 }
 .icon-shopping-3 {
   background-image: url(../img/sprite.png);
-  background-position: -1536px -480px;
+  background-position: -1568px -640px;
+  width: 32px;
+  height: 32px;
+}
+.icon-shopping-31 {
+  background-image: url(../img/sprite.png);
+  background-position: -1536px -672px;
   width: 32px;
   height: 32px;
 }
 .icon-shopping-4 {
   background-image: url(../img/sprite.png);
-  background-position: -1568px -416px;
+  background-position: -1568px -672px;
+  width: 32px;
+  height: 32px;
+}
+.icon-shopping-41 {
+  background-image: url(../img/sprite.png);
+  background-position: -1536px -704px;
   width: 32px;
   height: 32px;
 }
 .icon-skype {
   background-image: url(../img/sprite.png);
-  background-position: -1536px -632px;
+  background-position: -1584px -800px;
   width: 16px;
   height: 16px;
 }
-.icon-smartphones23(1) {
+.icon-smartphones23 {
   background-image: url(../img/sprite.png);
-  background-position: -1536px -384px;
+  background-position: -1536px -736px;
   width: 32px;
   height: 32px;
 }
-.icon-speakers17(2) {
+.icon-speakers17 {
   background-image: url(../img/sprite.png);
-  background-position: -1568px -352px;
+  background-position: -1568px -736px;
+  width: 32px;
+  height: 32px;
+}
+.icon-speakers171 {
+  background-image: url(../img/sprite.png);
+  background-position: -1536px -768px;
   width: 32px;
   height: 32px;
 }
 .icon-stars64 {
   background-image: url(../img/sprite.png);
-  background-position: -1536px -352px;
+  background-position: -1568px -608px;
+  width: 32px;
+  height: 32px;
+}
+.icon-stars641 {
+  background-image: url(../img/sprite.png);
+  background-position: -1568px -704px;
   width: 32px;
   height: 32px;
 }
 .icon-text file5 {
   background-image: url(../img/sprite.png);
-  background-position: -512px -512px;
+  background-position: 0px -1024px;
   width: 512px;
   height: 512px;
 }
 .icon-vehicle102 {
   background-image: url(../img/sprite.png);
-  background-position: -1536px -256px;
+  background-position: -1568px -384px;
+  width: 32px;
+  height: 32px;
+}
+.icon-vehicle1021 {
+  background-image: url(../img/sprite.png);
+  background-position: -1536px -384px;
   width: 32px;
   height: 32px;
 }
 .icon-wallets3 {
   background-image: url(../img/sprite.png);
-  background-position: -1568px -256px;
+  background-position: -1568px -352px;
+  width: 32px;
+  height: 32px;
+}
+.icon-wallets31 {
+  background-image: url(../img/sprite.png);
+  background-position: -1536px -288px;
   width: 32px;
   height: 32px;
 }
 .icon-zoom13 {
   background-image: url(../img/sprite.png);
-  background-position: -1552px -648px;
+  background-position: -1584px -848px;
   width: 16px;
   height: 16px;
 }

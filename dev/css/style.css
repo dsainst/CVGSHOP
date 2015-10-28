@@ -3,11 +3,18 @@ body {
   font-family: "Exo 2", sans-serif;
   font-weight: 500;
   padding: 0;
+  background: url(../../tpl/img/texture2.jpg);
 }
 ul {
   padding: 0;
   list-style: none;
   margin: 0;
+}
+a {
+  color: #fff;
+}
+a:hover {
+  color: #34c6f4;
 }
 header {
   background: #2f2f2f url(../../tpl/img/hexellence.png);
@@ -16,7 +23,7 @@ header .top-line {
   padding: 10px;
   background: #7f7f7f;
   color: #313030;
-  box-shadow: 0 2px 5px #000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.47);
 }
 header .top-line ul {
   overflow: hidden;
@@ -55,7 +62,7 @@ header .logo {
   background: #484848;
   width: 100%;
   border-top: 3px solid #fff;
-  box-shadow: 0 2px 5px #000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.47);
 }
 .top-menu ul {
   display: flex;
@@ -125,4 +132,145 @@ header .logo {
 }
 .top-menu ul li:last-child {
   margin-right: 0;
+}
+.sidebar-left {
+  margin-top: 10px;
+}
+.sidebar-left .side-menu li {
+  overflow: hidden;
+  position: relative;
+  display: block;
+  background: #313131;
+  margin-bottom: 5px;
+}
+.sidebar-left .side-menu li:before {
+  content: '';
+  background: #34c6f4;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  display: block;
+  height: 150px;
+  transition: all 0.4s;
+}
+.sidebar-left .side-menu li:hover:before {
+  left: 0px;
+}
+.sidebar-left .side-menu li a {
+  color: #fff;
+  position: relative;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 300;
+  text-decoration: none;
+  letter-spacing: -1px;
+  width: 100%;
+  display: block;
+  padding: 10px;
+  padding-bottom: 13px;
+}
+.sidebar-left .side-menu li.active a {
+  background: #34c6f4;
+}
+.sidebar-left .side-menu li:last-child {
+  margin-bottom: 0;
+}
+.main-block .title {
+  border-bottom: 1px solid #fff;
+  margin-bottom: 30px;
+}
+.main-block .title .h1 {
+  font-size: 20px;
+  color: #34c6f4;
+  letter-spacing: -1px;
+  font-weight: 300;
+  border-bottom: 1px solid #34c6f4;
+  position: relative;
+  bottom: -1px;
+  padding-bottom: 10px;
+  margin-bottom: 0;
+  display: inline-block;
+}
+.main-block .low-menu {
+  display: flex;
+}
+.main-block .low-menu li {
+  margin: 0 auto;
+}
+.main-block .low-menu li:first-child {
+  margin-left: 0;
+}
+.main-block .low-menu li:last-child {
+  padding-right: 0;
+  margin-right: 0;
+}
+.main-block .low-menu li a {
+  line-height: 50px;
+  font-size: 16px;
+  background-image: url(../../tpl/img/sprite.png);
+  display: block;
+  float: left;
+}
+.main-block .low-menu li a.icon-coffee135:hover {
+  background-position: -1536px -352px;
+}
+.main-block .low-menu li a.icon-wallets3:hover {
+  background-position: -1536px -288px;
+}
+.main-block .low-menu li a.icon-cups17:hover {
+  background-position: -1536px -608px;
+}
+.main-block .low-menu li a.icon-shopping-3:hover {
+  background-position: -1536px -672px;
+}
+.main-block .low-menu li a.icon-note62:hover {
+  background-position: -1536px -480px;
+}
+.main-block .low-menu li a.icon-stars64:hover {
+  background-position: -1568px -704px;
+}
+.main-block .low-menu li a.icon-shopping-4:hover {
+  background-position: -1536px -704px;
+}
+.main-block .low-menu li a.icon-vehicle102:hover {
+  background-position: -1536px -384px;
+}
+.main-block .low-menu li a.icon-oil22:hover {
+  background-position: -1536px -512px;
+}
+.main-block .low-menu li a.icon-books91:hover {
+  background-position: -1568px -288px;
+}
+.main-block .low-menu li a.icon-speakers17:hover {
+  background-position: -1536px -768px;
+}
+.main-block .low-menu li a.icon-pictures28:hover {
+  background-position: -1568px -544px;
+}
+.main-block .low-menu li a.icon-automobile10:hover {
+  background-position: -1536px -416px;
+}
+.ui-tooltip {
+  background: #34c6f4;
+  padding: 5px 10px;
+  position: absolute;
+  z-index: 9999;
+  max-width: 300px;
+}
+.ui-tooltip:before {
+  content: '';
+  position: absolute;
+  /* ���������� ���������������� */
+  left: 10px;
+  top: -10px;
+  /* ��������� ������������ */
+  border: 5px solid transparent;
+  /* ���������� ������� */
+  border-bottom: 5px solid #34c6f4;
+  /* ��������� ����������� */
+}
+.ui-tooltip .ui-tooltip-content {
+  color: #fff;
+  font-size: 16px;
 }

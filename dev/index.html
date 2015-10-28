@@ -9,8 +9,13 @@
     <link rel="stylesheet" href="tpl/css/sprite.css?rev=@@hash">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script src="/jquery.airStickyBlock.min.js"></script>
-
+    <script>
+        $(function() {
+            $( document ).tooltip();
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -67,5 +72,80 @@
                 </div>
             </div>
     </header>
+
+<section id="main">
+    <div class="container-fluid">
+        <div class="row airSticky__stop-block">
+            <div class="col-lg-3 col-sm-3 col-md-4">
+                <div class="sidebar-left airSticky">
+                    <ul class="side-menu">
+                        <li><a href="#">Готовые комплекты</a></li>
+                        <li><a href="#">Потолочная акустика</a></li>
+                        <li><a href="#">Настенные акустические системы</a></li>
+                        <li><a href="#">Специальные</a></li>
+                        <li><a href="#">Сабвуферы</a></li>
+                        <li><a href="#">Ландшафтная акустика</a></li>
+                        <li><a href="#">Усилители и предусилители</a></li>
+                        <li><a href="#">Регуляторы громкости</a></li>
+                        <li><a href="#">Микрофоны</a></li>
+                        <li class="active"><a href="#">Кабели</a></li>
+                        <li><a href="#">Дополнительное оборудование</a></li>
+                        <li><a href="#">Рекламные плееры и софт</a></li>
+                        <li><a href="#">Архивные модели</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-6  col-md-8">
+                <div class="main-block">
+                    <!-- Готовые комплекты -->
+                    <div class="block-one">
+                        <div class="title">
+                            <div class="h1">Готовые комплекты звукового оборудования</div>
+                        </div>
+                        <ul class="low-menu">
+                            <li><a href="#" class="icon-3">Все</a></li>
+                            <li><a href="#" class="icon-coffee135" title="Кафе, бары, рестораны"></a></li>
+                            <li><a href="#" class="icon-wallets3" title="Образовательные учреждения"></a></li>
+                            <li><a href="#" class="icon-cups17"></a></li>
+                            <li><a href="#" class="icon-shopping-3"></a></li>
+                            <li><a href="#" class="icon-note62"></a></li>
+                            <li><a href="#" class="icon-stars64"></a></li>
+                            <li><a href="#" class="icon-shopping-4"></a></li>
+                            <li><a href="#" class="icon-vehicle102"></a></li>
+                            <li><a href="#" class="icon-oil22"></a></li>
+                            <li><a href="#" class="icon-books91"></a></li>
+                            <li><a href="#" class="icon-speakers17"></a></li>
+                            <li><a href="#" class="icon-pictures28"></a></li>
+                            <li><a href="#" class="icon-automobile10" title="Образовательные учреждения"></a></li>
+                        </ul>
+                        <!-- Карусель -->
+                    </div>
+                    <!-- Хиты продаж, Акции, Новинки -->
+                    <div class="block-two">
+                        <div class="title">
+                            <div class="h1">Хиты продаж Акции Новинки</div>
+                        </div>
+                    </div>
+                    <!-- Услуги -->
+                    <div class="block-three">
+                        <div class="title">
+                            <div class="h1">Услуги</div>
+                        </div>
+                    </div>
+                    <!-- Галерея проектов -->
+                    <div class="block-four">
+                        <div class="title">
+                            <div class="h1">Галерея проектов</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-3">
+                <div class="sidebar-right airSticky2">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 </body>
 </html>
