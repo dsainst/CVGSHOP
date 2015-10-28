@@ -7,6 +7,7 @@ body {
   font-family: "Exo 2", sans-serif;
   font-weight: 500;
   padding: 0;
+  min-width: 1100px;
   background: url(../../tpl/img/texture2.jpg);
 }
 
@@ -149,8 +150,13 @@ header {
   }
 }
 
+.sidebar-right {
+  margin-bottom: 20px;
+}
+
 .sidebar-left {
-  margin-top: 10px;
+  margin-top: 25px;
+  margin-bottom: 20px;
   .side-menu {
     li {
       overflow: hidden;
@@ -200,26 +206,28 @@ header {
   }
 }
 
-.main-block {
-  .title {
-    border-bottom: 1px solid #fff;
-    margin-bottom: 30px;
-    .h1 {
-      font-size: 20px;
-      color: @color;
-      letter-spacing: -1px;
-      font-weight: 300;
-      border-bottom: 1px solid @color;
-      position: relative;
-      bottom: -1px;
-      padding-bottom: 10px;
-      margin-bottom: 0;
-      display: inline-block;
-    }
+.title {
+  border-bottom: 1px solid #fff;
+  margin-bottom: 30px;
+  .h1 {
+    font-size: 20px;
+    color: @color;
+    letter-spacing: -1px;
+    font-weight: 300;
+    border-bottom: 1px solid @color;
+    position: relative;
+    bottom: -1px;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+    display: inline-block;
   }
+}
+
+.main-block {
 
   .low-menu {
     display: flex;
+    margin-bottom: 10px;
     li {
       margin: 0 auto;
       &:first-child {
@@ -235,54 +243,295 @@ header {
         background-image: url(../../tpl/img/sprite.png);
         display: block;
         float: left;
-        &.icon-coffee135:hover {
-          background-position: -1536px -352px;
-        }
-        &.icon-wallets3:hover {
-          background-position: -1536px -288px;
-        }
-        &.icon-cups17:hover {
-          background-position: -1536px -608px;
-        }
-        &.icon-shopping-3:hover {
-          background-position: -1536px -672px;
-        }
-        &.icon-note62:hover {
-          background-position: -1536px -480px;
-        }
-        &.icon-stars64:hover {
-          background-position: -1568px -704px;
-        }
-        &.icon-shopping-4:hover {
-          background-position: -1536px -704px;
-        }
-        &.icon-vehicle102:hover {
-          background-position: -1536px -384px;
-        }
-        &.icon-oil22:hover {
-          background-position: -1536px -512px;
-        }
-        &.icon-books91:hover {
-          background-position: -1568px -288px;
-        }
-        &.icon-speakers17:hover {
-          background-position: -1536px -768px;
-        }
-        &.icon-pictures28:hover {
-          background-position: -1568px -544px;
-        }
-        &.icon-automobile10:hover {
-          background-position: -1536px -416px;
-        }
 
       }
     }
   }
 }
 
+.carousel-complects {
+  margin-right: -12px;
+  margin-left: -12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  padding-top: 60px;
+
+  .btn-arrow-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 46%;
+    text-align: center;
+  }
+  .btn-arrow-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 47%;
+    text-align: center;
+  }
+  .slick-prev {
+    display: block;
+    width: 15px;
+    height: 15px;
+    right: 0;
+    top: 0;
+    position: absolute;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  .slick-next {
+    display: block;
+    width: 15px;
+    height: 15px;
+    top: 0;
+    left: 0;
+    font-size: 30px;
+    position: absolute;
+    cursor: pointer;
+  }
+
+
+  .slick-track {
+    height: auto;
+  }
+  .item {
+    overflow: hidden;
+    margin: 0 12px;
+    background: #313131;
+    color: #fff;
+    height: auto;
+    .block-image {
+      overflow: hidden;
+      position: relative;
+      border: 1px solid transparent;
+      .icon-sale, .icon-hot, .icon-new, .icon-pro {
+        position: absolute;
+        left: -65px;
+        top: -10px;
+        width: 100px;
+        background: #eba714;
+        transform: rotate(-45deg);
+        padding: 40px 70px 5px;
+        text-align: center;
+        font-size: 16px;
+      }
+      .icon-hot {
+        background: #eb6014;
+      }
+      .icon-new {
+        background: #bbeb14;
+      }
+      .icon-pro {
+        background: @color;
+      }
+      &:before {
+        content: '';
+        background: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        display: block;
+        transition: all 0.3s;
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
+      .icon-opacity {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        left: 0;
+        right: 0;
+        margin: 50% auto;
+        margin-top: calc(50% - 8px);
+        opacity: 0;
+        transition: opacity .3s;
+        span {
+          display: block;
+        }
+      }
+    }
+    .block-price {
+      overflow: hidden;
+      p {
+        font-size: 20px;
+        color: #fff;
+        padding: 10px;
+        border-bottom: 1px solid #fff;
+        margin-bottom: 0;
+      }
+    }
+    .block-title {
+      overflow: hidden;
+      padding: 10px;
+      p {
+        font-size: 17px;
+        font-weight: 200;
+        line-height: 16px;
+        margin-bottom: 0;
+      }
+    }
+
+    &:hover {
+      color: #e3e3e3;
+      box-shadow: @shadow;
+      .block-price {
+        p {
+          color: @color;
+          border-bottom: 1px solid @color;
+        }
+      }
+      .block-image {
+        border: 1px solid #000;
+        &:before {
+          opacity: 1;
+        }
+        .icon-opacity {
+          opacity: 1;
+        }
+      }
+
+    }
+  }
+}
+
+.service-block {
+  display: flex;
+  width: 100%;
+  .service-item {
+    margin: 0 auto;
+    float: left;
+    text-align: center;
+    width: 18%;
+
+    &:hover {
+      .service-image {
+        background: @color;
+      }
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    &:first-child {
+      margin-left: 0;
+    }
+    .service-image {
+      width: 60px;
+      height: 60px;
+      padding: 8px 0px;
+      border-radius: 50%;
+      clear: both;
+      background: #313131;
+      float: none;
+      margin: 0 auto;
+    }
+    .service-title {
+      p {
+        color: #fff;
+        width: 100%;
+        font-size: 16px;
+        letter-spacing: -1px;
+        font-weight: 200;
+      }
+    }
+
+  }
+}
+
+.sidenews {
+  .news-item {
+    background: rgba(99, 99, 99, 0.50);
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #fff;
+    overflow: hidden;
+    box-shadow: @shadow;
+    .news-img {
+      float: left;
+      margin-right: 20px;
+      border: 1px solid #000;
+      width: 72px;
+      overflow: hidden;
+      margin-top: 2px;
+      img {
+        max-width: 72px;
+      }
+    }
+    .news-desc {
+      p {
+        font-weight: 200;
+        line-height: 1.2em;
+      }
+    }
+
+  }
+}
+
+.publications {
+  .pub-item {
+    padding: 10px;
+    padding-bottom: 5px;
+    background: rgba(99, 99, 99, 0.50);
+    margin-bottom: 5px;
+    p {
+      font-size: 20px;
+      font-weight: 200;
+      color: #fff;
+      line-height: 1.2em;
+      letter-spacing: -1px;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+#testimonials {
+  background: url(../../tpl/img/mic.jpg) no-repeat;
+  background-position: center;
+  background-size: cover; /* Масштабируем фон */
+  height: 215px;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  padding: 50px;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 215px;
+    background: rgba(0,0,0,0.5);
+  }
+  .tes-high {
+    p {
+      font-size: 70px;
+      font-weight: 200;
+      line-height: 1em;
+      margin-bottom: 0;
+      text-align: center;
+    }
+  }
+  .tes-desc {
+    p {
+      font-size: 20px;
+      line-height: 1.2em;
+      margin-bottom: 0;
+      text-align: center;
+    }
+  }
+}
+
 .ui-tooltip {
   background: @color;
-  padding: 5px 10px;
+  padding: 3px 10px;
   position: absolute;
   z-index: 9999;
   max-width: 300px;
