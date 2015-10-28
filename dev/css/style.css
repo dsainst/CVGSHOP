@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 500;
+  padding: 0;
+}
+ul {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+header {
+  background: #2f2f2f url(../../tpl/img/hexellence.png);
+}
+header .top-line {
+  padding: 10px;
+  background: #7f7f7f;
+  color: #313030;
+  box-shadow: 0 2px 5px #000;
+}
+header .top-line ul {
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+}
+header .top-line ul li {
+  display: inline-block;
+  margin: 0 auto;
+  font-size: 20px;
+}
+header .top-line ul li .icon-map,
+header .top-line ul li .icon-skype,
+header .top-line ul li .icon-mail,
+header .top-line ul li .icon-icq,
+header .top-line ul li .icon-phone {
+  background-image: url(../../tpl/img/sprite.png);
+  display: block;
+  float: left;
+  margin-right: 15px;
+  margin-top: 5px;
+}
+header .top-line ul li:first-child {
+  margin-left: 0;
+}
+header .top-line ul li:last-child {
+  margin-right: 0;
+}
+header .logo {
+  padding: 70px 0;
+}
+.top-menu {
+  color: #fff;
+  font-size: 25px;
+  text-transform: uppercase;
+  background: #484848;
+  width: 100%;
+  border-top: 3px solid #fff;
+  box-shadow: 0 2px 5px #000;
+}
+.top-menu ul {
+  display: flex;
+  width: 100%;
+}
+.top-menu ul li {
+  margin: 0 auto;
+  float: left;
+  font-weight: 300;
+  letter-spacing: -1px;
+  top: -3px;
+  overflow: hidden;
+  position: relative;
+}
+.top-menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 15px 0 12px;
+  display: block;
+}
+.top-menu ul li a:hover {
+  color: #34c6f4;
+}
+.top-menu ul li:before {
+  content: '';
+  width: 50%;
+  height: 3px;
+  background: #34c6f4;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -50%;
+  transition: all 0.3s;
+}
+.top-menu ul li:after {
+  content: '';
+  width: 50%;
+  height: 3px;
+  background: #34c6f4;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  transition: all 0.3s;
+}
+.top-menu ul li:hover:before {
+  content: '';
+  left: 0;
+}
+.top-menu ul li:hover:after {
+  content: '';
+  left: 50%;
+}
+.top-menu ul li.active:before {
+  content: '';
+  left: 0;
+}
+.top-menu ul li.active:after {
+  content: '';
+  left: 50%;
+}
+.top-menu ul li.active a {
+  color: #34c6f4;
+}
+.top-menu ul li:first-child {
+  margin-left: 0;
+}
+.top-menu ul li:last-child {
+  margin-right: 0;
+}
