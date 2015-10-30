@@ -4,7 +4,7 @@ body {
   font-weight: 500;
   padding: 0;
   min-width: 1100px;
-  background: url(../../tpl/img/texture2.jpg);
+  background: #484848 url(../../tpl/img/texture2.jpg);
 }
 ul {
   padding: 0;
@@ -19,8 +19,18 @@ a:hover {
   color: #34c6f4;
   transition: color 0.2s;
 }
+.mb20 {
+  margin-bottom: 20px;
+}
+.mb30 {
+  margin-bottom: 30px;
+}
+.mb40 {
+  margin-bottom: 40px;
+}
 header {
   background: #2f2f2f url(../../tpl/img/hexellence.png);
+  min-width: 1210px;
 }
 header .top-line {
   padding: 10px;
@@ -159,7 +169,7 @@ header .logo {
   width: 100%;
   display: block;
   height: 150px;
-  transition: all 0.4s;
+  transition: left 0.4s;
 }
 .sidebar-left .side-menu li:hover:before {
   left: 0px;
@@ -487,10 +497,11 @@ header .logo {
   text-decoration: none;
 }
 #testimonials {
+  min-width: 1210px;
   background: url(../../tpl/img/mic.jpg) no-repeat;
   background-position: center;
   background-size: cover;
-  /* ������������ ��� */
+  /* Масштабируем фон */
   height: 215px;
   overflow: hidden;
   position: relative;
@@ -526,22 +537,11 @@ header .logo {
   display: flex;
   padding-bottom: 20px;
 }
-.company-block .company-item {
-  overflow: hidden;
-  margin: 0 auto;
-  float: left;
-}
-.company-block .company-item:last-child {
-  margin-right: 0;
-}
-.company-block .company-item:first-child {
-  margin-left: 0;
-}
 .company-block .company-item .company-image {
   text-align: center;
 }
 .company-block .company-item .company-image img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 .company-block .company-item .company-title {
@@ -559,6 +559,7 @@ header .logo {
 }
 #trust {
   background: #fff;
+  min-width: 1210px;
   padding: 20px 0 40px;
   border-bottom: 5px solid #34c6f4;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.47);
@@ -619,9 +620,52 @@ footer {
   background: #484848;
   position: relative;
   z-index: 2;
+  min-width: 1210px;
 }
 footer .flogo {
   margin: 30px 0;
+}
+footer .ftitle {
+  margin-bottom: 15px;
+}
+footer .ftitle .head {
+  font-size: 18px;
+  color: #fff;
+}
+footer p {
+  color: #fff;
+  font-size: 16px;
+}
+footer .subscribe-text {
+  font-weight: 300;
+  color: #bababa;
+  line-height: 1.2em;
+  white-space: nowrap;
+}
+footer ul li {
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: -1px;
+}
+footer ul li a {
+  color: #bababa;
+}
+footer ul li a:hover {
+  text-decoration: none;
+}
+.bot-line {
+  background: #2f2f2f;
+  color: #bababa;
+  padding: 10px 0;
+  margin-top: 30px;
+}
+.bot-line p {
+  line-height: 20px;
+  margin: 0;
+  font-size: 14px;
+}
+.tcenter {
+  text-align: center;
 }
 .ui-tooltip {
   background: #34c6f4;
@@ -633,16 +677,31 @@ footer .flogo {
 .ui-tooltip:before {
   content: '';
   position: absolute;
-  /* ���������� ���������������� */
+  /* Абсолютное позиционирование */
   left: 10px;
   top: -10px;
-  /* ��������� ������������ */
+  /* Положение треугольника */
   border: 5px solid transparent;
-  /* ���������� ������� */
+  /* Прозрачные границы */
   border-bottom: 5px solid #34c6f4;
-  /* ��������� ����������� */
+  /* Добавляем треугольник */
 }
 .ui-tooltip .ui-tooltip-content {
   color: #fff;
   font-size: 16px;
+}
+@media all and (max-width: 1200px) {
+  .dnone {
+    display: none;
+  }
+  .container-fluid {
+    width: 1200px;
+  }
+  .sidebar-right,
+  .sidebar-left {
+    position: relative !important;
+  }
+  #testimonials {
+    padding: 50px 0;
+  }
 }

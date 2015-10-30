@@ -6,13 +6,27 @@ $(function() {
 });
 jQuery(document).ready(function($){
     window.onload = function() {
-        $('.airSticky').airStickyBlock({
-            stopBlock: '.airSticky__stop-block'
-        });
-        $('.airSticky2').airStickyBlock({
-            stopBlock: '.airSticky__stop-block'
-        });
+        if ($(window).width()>'1220') {
+            $('.airSticky').airStickyBlock({
+                stopBlock: '.airSticky__stop-block'
+            });
+            $('.airSticky2').airStickyBlock({
+                stopBlock: '.airSticky__stop-block'
+            });
+        }
     };
+
+    $( window ).resize(function() {
+        if ($(window).width() > '1220') {
+            $('.airSticky').airStickyBlock({
+                stopBlock: '.airSticky__stop-block'
+            });
+            $('.airSticky2').airStickyBlock({
+                stopBlock: '.airSticky__stop-block'
+            });
+        }
+    });
+
     var className;
     $('.low-menu li a').hover(function(){
         className = $(this).attr('class');

@@ -2,14 +2,13 @@
 @shadow2: 0 5px 5px rgba(0, 0, 0, 0.67);
 @color: #34c6f4;
 
-
 body {
   margin: 0;
   font-family: "Exo 2", sans-serif;
   font-weight: 500;
   padding: 0;
   min-width: 1100px;
-  background: url(../../tpl/img/texture2.jpg);
+  background: #484848 url(../../tpl/img/texture2.jpg);
 }
 
 ul {
@@ -28,9 +27,21 @@ a {
   }
 }
 
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.mb30 {
+  margin-bottom: 30px;
+}
+
+.mb40 {
+  margin-bottom: 40px;
+}
 
 header {
   background: #2f2f2f url(../../tpl/img/hexellence.png);
+  min-width: 1210px;
 
   .top-line {
     padding: 10px;
@@ -141,7 +152,7 @@ header {
         a {
           color: @color;
         }
-        
+
       }
       &:first-child {
         margin-left: 0;
@@ -175,7 +186,7 @@ header {
         width: 100%;
         display: block;
         height: 150px;
-        transition: all 0.4s;
+        transition: left 0.4s;
       }
       &:hover {
         &:before {
@@ -547,9 +558,10 @@ header {
 }
 
 #testimonials {
+  min-width: 1210px;
   background: url(../../tpl/img/mic.jpg) no-repeat;
   background-position: center;
-  background-size: cover; /* Масштабируем фон */
+  background-size: cover; /* РњР°СЃС€С‚Р°Р±РёСЂСѓРµРј С„РѕРЅ */
   height: 215px;
   overflow: hidden;
   position: relative;
@@ -590,20 +602,11 @@ header {
   display: flex;
   padding-bottom: 20px;
   .company-item {
-    overflow: hidden;
-    margin: 0 auto;
-    float: left;
-    &:last-child {
-      margin-right: 0;
-    }
-    &:first-child {
-      margin-left: 0;
-    }
-    
+
     .company-image {
       text-align: center;
       img {
-        max-width: 100%;
+        width: 100%;
         height: auto;
       }
     }
@@ -626,6 +629,7 @@ header {
 
 #trust {
   background: #fff;
+  min-width: 1210px;
   padding: 20px 0 40px;
   border-bottom: 5px solid @color;
   box-shadow: @shadow;
@@ -687,9 +691,57 @@ footer {
   background: #484848;
   position: relative;
   z-index: 2;
+  min-width: 1210px;
   .flogo {
     margin: 30px 0;
   }
+  .ftitle {
+    margin-bottom: 15px;
+    .head {
+      font-size: 18px;
+      color: #fff;
+    }
+  }
+  p {
+    color: #fff;
+    font-size: 16px;
+  }
+  .subscribe-text {
+    font-weight: 300;
+    color: #bababa;
+    line-height: 1.2em;
+    white-space: nowrap;
+  }
+  ul {
+    li {
+      font-size: 16px;
+      font-weight: 300;
+      letter-spacing: -1px;
+      a {
+        color: #bababa;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+    }
+  }
+}
+
+.bot-line {
+  background: #2f2f2f;
+  color: #bababa;
+  padding: 10px 0;
+  margin-top: 30px;
+  p {
+    line-height: 20px;
+    margin: 0;
+    font-size: 14px;
+  }
+}
+
+.tcenter {
+  text-align: center;
 }
 
 .ui-tooltip {
@@ -700,14 +752,30 @@ footer {
   max-width: 300px;
   &:before {
     content: '';
-    position: absolute; /* Абсолютное позиционирование */
-    left: 10px; top: -10px; /* Положение треугольника */
-    border: 5px solid transparent; /* Прозрачные границы */
-    border-bottom: 5px solid @color; /* Добавляем треугольник */
+    position: absolute; /* РђР±СЃРѕР»СЋС‚РЅРѕРµ РїРѕР·РёС†РёРѕРЅРёСЂРѕРІР°РЅРёРµ */
+    left: 10px; top: -10px; /* РџРѕР»РѕР¶РµРЅРёРµ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР° */
+    border: 5px solid transparent; /* РџСЂРѕР·СЂР°С‡РЅС‹Рµ РіСЂР°РЅРёС†С‹ */
+    border-bottom: 5px solid @color; /* Р”РѕР±Р°РІР»СЏРµРј С‚СЂРµСѓРіРѕР»СЊРЅРёРє */
 
   }
   .ui-tooltip-content {
     color: #fff;
     font-size: 16px;
+  }
+}
+
+@media all and (max-width: 1200px) {
+  .dnone {
+    display: none;
+  }
+  .container-fluid {
+    width: 1200px;
+  }
+  .sidebar-right, .sidebar-left {
+    position: relative !important;
+  }
+
+  #testimonials {
+    padding: 50px 0;
   }
 }
