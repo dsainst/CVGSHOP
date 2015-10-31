@@ -14,6 +14,7 @@
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script src="tpl/js/slick/slick.min.js"></script>
     <script src="tpl/js/jquery.airStickyBlock.min.js"></script>
+    <script src="tpl/js/jquery.animateNumber.js"></script>
     <script src="tpl/js/mydop.js"></script>
 </head>
 <body>
@@ -44,13 +45,40 @@
                     </div>
                 </div>
                 <div class="col-xs-4">
+                    <div class="lk-block">
+                        <div class="col-xs-6">
+                            <a href="#" class="register">Регистрация</a>
+                            <a href="#" class="login">Вход</a>
+                        </div>
+                        <div class="col-xs-6">
+                            <a href="#" class="login">Написать нам</a>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="search-block">
+                            <form class="sisea-search-form" action="#" method="get">
+                                <input type="search" name="search" placeholder="Поиск" id="search" value="">
+                                <input type="hidden" name="id" value="25">
+                                <button class="btn-search"><i class="icon-search"></i></button>
+                            </form>
+                        </div>
+                    </div>
 
                 </div>
                 <div class="col-xs-3">
+                    <div class="block-call">
+                        <div class="icon-smartphones23"></div>
+                        <p>Бесплатный звонок по России</p>
+                        <p>8 (800) 555 55 55</p>
+                    </div>
 
                 </div>
                 <div class="col-xs-2">
-
+                    <div class="cart-block">
+                        <div class="icon-shopping-1"></div>
+                        <p>Корзина</p>
+                        <p>товаров: 58</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -531,13 +559,12 @@
         </div>
     </div>
 </section>
-
 <section id="testimonials">
     <div class="container-fluid">
         <div class="col-xs-3">
             <div class="tes-block">
                 <div class="tes-high">
-                    <p>2008</p>
+                    <p class="animateNum" data-num="2008">2008</p>
                 </div>
                 <div class="tes-desc">
                     <p>Наша компания на рынке с 2008 года</p>
@@ -547,7 +574,7 @@
         <div class="col-xs-3">
             <div class="tes-block">
                 <div class="tes-high">
-                    <p>23 000</p>
+                    <p class="animateNum" data-num="23000" data-separator="true">23 000</p>
                 </div>
                 <div class="tes-desc">
                     <p>23 000 компаний стали нашими клиентами</p>
@@ -557,7 +584,7 @@
         <div class="col-xs-3">
             <div class="tes-block">
                 <div class="tes-high">
-                    <p>6 000</p>
+                    <p class="animateNum" data-num="6000" data-separator="true">6 000</p>
                 </div>
                 <div class="tes-desc">
                     <p>Мы озвучили свыше 6 000 объектов</p>
@@ -567,7 +594,7 @@
         <div class="col-xs-3">
             <div class="tes-block">
                 <div class="tes-high">
-                    <p>150</p>
+                    <p class="animateNum" data-num="150">150</p>
                 </div>
                 <div class="tes-desc">
                     <p>На нашем счету 150 городов России</p>

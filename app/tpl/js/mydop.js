@@ -4,6 +4,7 @@
 $(function() {
     $( document ).tooltip();
 });
+
 jQuery(document).ready(function($){
     window.onload = function() {
         if ($(window).width()>'1220') {
@@ -15,6 +16,32 @@ jQuery(document).ready(function($){
             });
         }
     };
+
+    var show = true;
+    $(window).scroll(function() {
+        if (!show) return false;
+        $('.animateNum').each(function() {
+            var imagePos = $(this).offset().top,
+                topOfWindow = $(window).scrollTop(),
+                mheight = $(window).height(),
+                separator = $(this).attr("data-separator"),
+                datanum = $(this).attr('data-num');
+
+
+            if (separator) comma_separator_number_step = $.animateNumber.numberStepFactories.separator(' ');
+            else comma_separator_number_step = false;
+
+            if (imagePos < topOfWindow + mheight) {
+                $(this).stop().animateNumber({
+                    number: datanum,
+                    numberStep: comma_separator_number_step
+                }, 2000);
+                show = false;
+            }
+        });
+    });
+
+
 
     $( window ).resize(function() {
         if ($(window).width() > '1220') {
