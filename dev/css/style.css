@@ -4,7 +4,16 @@ body {
   font-weight: 500;
   padding: 0;
   min-width: 1100px;
-  background: #484848 url(../../tpl/img/texture2.jpg);
+  background: #484848 url(../img/texture2.jpg);
+}
+img,
+a:active,
+a:focus,
+a {
+  outline: none;
+}
+.ui-helper-hidden-accessible {
+  display: none;
 }
 ul {
   padding: 0;
@@ -29,7 +38,7 @@ a:hover {
   margin-bottom: 40px;
 }
 header {
-  background: #2f2f2f url(../../tpl/img/hexellence.png);
+  background: #2f2f2f url(../img/hexellence.png);
   min-width: 1210px;
 }
 header .top-line {
@@ -56,7 +65,7 @@ header .top-line ul li .icon-phone {
   display: block;
   float: left;
   margin-right: 15px;
-  margin-top: 5px;
+  margin-top: 7px;
 }
 header .top-line ul li:first-child {
   margin-left: 0;
@@ -87,8 +96,9 @@ header .search-block #search {
   width: 90%;
   border: 1px solid #ddd;
   float: left;
-  padding: 10px;
+  padding: 8px;
   outline: none;
+  border-radius: 0;
   font-size: 18px;
   font-weight: 300;
   letter-spacing: -1px;
@@ -369,6 +379,7 @@ header .cart-block p {
   background: #313131;
   color: #fff;
   height: auto;
+  cursor: pointer;
 }
 .carousel-complects .item .block-image {
   overflow: hidden;
@@ -567,7 +578,7 @@ header .cart-block p {
 }
 #testimonials {
   min-width: 1210px;
-  background: url(../../tpl/img/mic.jpg) no-repeat;
+  background: url(../img/mic.jpg) no-repeat;
   background-position: center;
   background-size: cover;
   /* Масштабируем фон */
@@ -630,10 +641,6 @@ header .cart-block p {
   background: #fff;
   min-width: 1210px;
   padding: 20px 0 40px;
-  border-bottom: 5px solid #34c6f4;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.47);
-  position: relative;
-  z-index: 3;
 }
 #trust .partners-carousel {
   padding-top: 15px;
@@ -684,6 +691,12 @@ header .cart-block p {
 }
 #trust .title {
   border-bottom: 1px solid #efefef;
+}
+.line-blue {
+  border-bottom: 8px solid #34c6f4;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.47);
+  position: relative;
+  z-index: 3;
 }
 footer {
   background: #484848;

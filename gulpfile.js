@@ -7,7 +7,9 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     rev_append = require('gulp-rev-append'),
     livereload = require('gulp-livereload'),
-    spritesmith = require('gulp.spritesmith');
+    spritesmith = require('gulp.spritesmith'),
+    rename = require('gulp-rename'),
+    svgfallback = require('gulp-svgfallback');
 
 // less process...
 gulp.task('less', function () {
@@ -20,14 +22,14 @@ gulp.task('less', function () {
 gulp.task('rev_append', function () {
     return gulp.src('dev/index.html')
         .pipe(rev_append())
-        .pipe(gulp.dest('app/'))
+        .pipe(gulp.dest(''))
         .pipe(livereload());
 });
 
 // image process...
 gulp.task('image', function () {
     return gulp.src('dev/image/*')
-        .pipe(gulp.dest('app/tpl/img'))
+        .pipe(gulp.dest('tpl/img'))
         .pipe(livereload());
 });
 
@@ -37,14 +39,20 @@ gulp.task('sprite', function () {
         imgName: 'img/sprite.png',
         cssName: 'css/sprite.css'
     }));
-    return spriteData.pipe(gulp.dest('app/tpl/'))
+    return spriteData.pipe(gulp.dest('tpl/'))
         .pipe(livereload());
+});
+
+gulp.task('svg_sprite', function () {
+    return gulp
+        .src('dev/img/svg/**/*.svg')
+        .pipe(gulp.dest('tpl/img/svg'));
 });
 
 // js process...
 gulp.task('js', function () {
     return gulp.src('dev/js/*.js')
-        .pipe(gulp.dest('app/tpl/js/'))
+        .pipe(gulp.dest('tpl/js/'))
         .pipe(livereload());
 });
 
@@ -57,7 +65,7 @@ gulp.task('default', ['less'], function () {
         }))
         .pipe(concatCss("style.min.css"))
         .pipe(minifyCss({compatibility: 'ie8'}))
-        .pipe(gulp.dest('app/tpl/css/'))
+        .pipe(gulp.dest('tpl/css/'))
         .pipe(livereload());
 });
 
@@ -69,5 +77,6 @@ gulp.task('watch', function () {
     gulp.watch('dev/js/*.js', ['js'])
     gulp.watch('dev/index.html', ['rev_append'])
     gulp.watch('dev/img/*', ['sprite'])
+    gulp.watch('dev/img/svg/*', ['svg_sprite'])
     gulp.watch('dev/image/*', ['image'])
 })

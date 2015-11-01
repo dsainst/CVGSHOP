@@ -8,14 +8,22 @@ $(function() {
 jQuery(document).ready(function($){
     window.onload = function() {
         if ($(window).width()>'1220') {
-            $('.airSticky').airStickyBlock({
-                stopBlock: '.airSticky__stop-block'
+            $('.h-main').height($('#main-block').height());
+            $(".airSticky").stick_in_parent({
+                parent: ".airSticky__stop-block"
             });
-            $('.airSticky2').airStickyBlock({
-                stopBlock: '.airSticky__stop-block'
+            $(".airSticky2").stick_in_parent({
+                parent: ".airSticky__stop-block"
             });
         }
     };
+
+    $(window).on("resize", (function(_this) {
+        return function(e) {
+            $(document.body).trigger("sticky_kit:recalc");
+            return $('.h-main').height($('#main-block').height());
+        };
+    })(this));
 
     var show = true;
     $(window).scroll(function() {
@@ -42,18 +50,6 @@ jQuery(document).ready(function($){
     });
 
 
-
-    $( window ).resize(function() {
-        if ($(window).width() > '1220') {
-            $('.airSticky').airStickyBlock({
-                stopBlock: '.airSticky__stop-block'
-            });
-            $('.airSticky2').airStickyBlock({
-                stopBlock: '.airSticky__stop-block'
-            });
-        }
-    });
-
     var className;
     $('.low-menu li a').hover(function(){
         className = $(this).attr('class');
@@ -73,36 +69,19 @@ jQuery(document).ready(function($){
         nextArrow: '<div class="btn-arrow-right"><a class="slick-next"><i class="fa fa-chevron-right"></i></a></div>',
         responsive: [
             {
-                breakpoint: 1384,
+                breakpoint: 1604,
                 settings: {
                     slidesToShow: 4,
                     slidesToScroll: 4
                 }
             },
             {
-                breakpoint: 900,
+                breakpoint: 1300,
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 3
                 }
-            },
-            {
-                breakpoint: 680,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
             }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
         ]
     });
 
@@ -118,21 +97,21 @@ jQuery(document).ready(function($){
         nextArrow: '<div class="btn-arrow-right"><a class="slick-next"><i class="fa fa-chevron-right"></i></a></div>',
         responsive: [
             {
-                breakpoint: 1100,
+                breakpoint: 1600,
                 settings: {
                     slidesToShow: 6,
                     slidesToScroll: 6
                 }
             },
             {
-                breakpoint: 900,
+                breakpoint: 1300,
                 settings: {
                     slidesToShow: 5,
                     slidesToScroll: 5
                 }
             },
             {
-                breakpoint: 680,
+                breakpoint: 900,
                 settings: {
                     slidesToShow: 4,
                     slidesToScroll: 4
