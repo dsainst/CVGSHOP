@@ -40,3 +40,224 @@ body .icon-search {
   background: url(../img/svg/magnifying-glass122.svg);
   background-size: 16px 16px;
 }
+.logo {
+  position: relative;
+  width: 300px;
+}
+.logo a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.logo a .s1-logo {
+  text-indent: -9999px;
+  display: block;
+  width: 12px;
+  height: 34px;
+  background: url(../img/svg/01.svg);
+  background-size: 12px 34px;
+  position: absolute;
+  left: 35px;
+  z-index: 5;
+  animation: logo-animate-s1 4s infinite;
+}
+.logo a .s2-logo {
+  text-indent: -9999px;
+  display: block;
+  width: 14px;
+  height: 34px;
+  background: url(../img/svg/02.svg);
+  background-size: 14px 34px;
+  position: absolute;
+  left: 45px;
+  z-index: 5;
+  animation: logo-animate-s2 4s infinite;
+}
+.logo a .s3-logo {
+  text-indent: -9999px;
+  display: block;
+  width: 180px;
+  height: 34px;
+  z-index: 15;
+  background: url(../img/svg/logo.svg);
+  background-size: 180px 34px;
+  margin: 0 auto;
+}
+.logo a .s4-logo {
+  text-indent: -9999px;
+  display: block;
+  width: 14px;
+  height: 34px;
+  background: url(../img/svg/03.svg);
+  background-size: 14px 34px;
+  position: absolute;
+  top: 0;
+  z-index: 5;
+  right: 45px;
+  animation: logo-animate-s4 4s infinite;
+}
+.logo a .s5-logo {
+  text-indent: -9999px;
+  display: block;
+  width: 12px;
+  height: 34px;
+  background: url(../img/svg/04.svg);
+  background-size: 12px 34px;
+  position: absolute;
+  top: 0;
+  z-index: 5;
+  right: 35px;
+  animation: logo-animate-s5 4s infinite;
+}
+@keyframes logo-animate-s5 {
+  0% {
+    opacity: 1;
+    right: 34px;
+  }
+  10% {
+    opacity: 0;
+    right: 0;
+  }
+  30% {
+    opacity: 0;
+    right: 34px;
+  }
+  55% {
+    opacity: 1;
+    right: 34px;
+  }
+  65% {
+    opacity: 0;
+    right: 0;
+  }
+  70% {
+    opacity: 0;
+    right: 34px;
+  }
+  75% {
+    opacity: 1;
+    right: 34px;
+  }
+  85% {
+    opacity: 0;
+    right: 0;
+  }
+  100% {
+    opacity: 0;
+    right: 34px;
+  }
+}
+@keyframes logo-animate-s4 {
+  0% {
+    opacity: 1;
+    right: 45px;
+  }
+  20% {
+    opacity: 0;
+    right: 8px;
+  }
+  30% {
+    opacity: 0;
+    right: 45px;
+  }
+  65% {
+    opacity: 1;
+    right: 45px;
+  }
+  75% {
+    opacity: 0;
+    right: 8px;
+  }
+  80% {
+    opacity: 0;
+    right: 45px;
+  }
+  85% {
+    opacity: 1;
+    right: 45px;
+  }
+  95% {
+    opacity: 0;
+    right: 8px;
+  }
+  100% {
+    opacity: 0;
+    right: 45px;
+  }
+}
+@keyframes logo-animate-s1 {
+  0% {
+    opacity: 1;
+    left: 34px;
+  }
+  10% {
+    opacity: 0;
+    left: 0;
+  }
+  30% {
+    opacity: 0;
+    left: 34px;
+  }
+  55% {
+    opacity: 1;
+    left: 34px;
+  }
+  65% {
+    opacity: 0;
+    left: 0;
+  }
+  70% {
+    opacity: 0;
+    left: 34px;
+  }
+  75% {
+    opacity: 1;
+    left: 34px;
+  }
+  85% {
+    opacity: 0;
+    left: 0;
+  }
+  100% {
+    opacity: 0;
+    left: 34px;
+  }
+}
+@keyframes logo-animate-s2 {
+  0% {
+    opacity: 1;
+    left: 45px;
+  }
+  20% {
+    opacity: 0;
+    left: 8px;
+  }
+  30% {
+    opacity: 0;
+    left: 45px;
+  }
+  65% {
+    opacity: 1;
+    left: 45px;
+  }
+  75% {
+    opacity: 0;
+    left: 8px;
+  }
+  80% {
+    opacity: 0;
+    left: 45px;
+  }
+  85% {
+    opacity: 1;
+    left: 45px;
+  }
+  95% {
+    opacity: 0;
+    left: 8px;
+  }
+  100% {
+    opacity: 0;
+    left: 45px;
+  }
+}

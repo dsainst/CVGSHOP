@@ -1,8 +1,3 @@
-/** @preserve jQuery animateNumber plugin v0.0.12
- * (c) 2013, Alexandr Borisov.
- * https://github.com/aishek/jquery-animateNumber
- */
-
 // ['...'] notation using to avoid names minification by Google Closure Compiler
 (function($) {
   var reverse = function(value) {

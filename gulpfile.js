@@ -9,7 +9,7 @@ var gulp = require('gulp'),
     livereload = require('gulp-livereload'),
     spritesmith = require('gulp.spritesmith'),
     rename = require('gulp-rename'),
-    svgfallback = require('gulp-svgfallback');
+    uglify = require('gulp-uglify');
 
 // less process...
 gulp.task('less', function () {
@@ -52,6 +52,7 @@ gulp.task('svg_sprite', function () {
 // js process...
 gulp.task('js', function () {
     return gulp.src('dev/js/*.js')
+        .pipe(uglify())
         .pipe(gulp.dest('tpl/js/'))
         .pipe(livereload());
 });
