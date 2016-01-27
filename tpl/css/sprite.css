@@ -291,3 +291,11 @@ Icon classes can be used entirely standalone. They are named after their origina
   width: 32px;
   height: 32px;
 }
+.icon-shopping-1.fr20 {
+  width: 20px;
+  height: 20px;
+  background-size: 20px;
+  float: right;
+  margin-top: 5px;
+  margin-left: 10px;
+}

@@ -1,6 +1,10 @@
 @shadow: 0 2px 5px rgba(0, 0, 0, 0.47);
 @color: #34c6f4;
 
+html * {
+  max-height: 9999999px;
+}
+
 body {
   margin: 0;
   font-family: "Exo 2", sans-serif;
@@ -8,6 +12,11 @@ body {
   padding: 0;
   min-width: 1100px;
   background: #484848 url(../img/texture2.jpg);
+}
+
+/*fix safari border-radius*/
+input, textarea, button {
+  border-radius: 0;
 }
 
 img,a:active,a:focus,a {
@@ -33,6 +42,44 @@ a {
   }
 }
 
+.fright {
+  float: right;
+  text-align: right;
+}
+
+.fleft {
+  float: left;
+  text-align: left;
+}
+
+.pb10 {
+  padding-bottom: 10px;
+}
+
+.pt48 {
+  padding-top: 48px;
+}
+
+.pb20 {
+  padding-bottom: 20px;
+}
+
+.pb30 {
+  padding-bottom: 30px;
+}
+
+.pb40 {
+  padding-bottom: 40px;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.mt30 {
+  margin-top: 30px;
+}
+
 .mb20 {
   margin-bottom: 20px;
 }
@@ -45,15 +92,77 @@ a {
   margin-bottom: 40px;
 }
 
+.mt48 {
+  margin-top: 48px;
+}
+
+.w30_float_left {
+  width: 30%;
+  float: left;
+}
+
+.w70_float_left {
+  width: 70%;
+  float: left;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.ajax_form .error {
+  border: 1px solid red;
+}
+
+.form-control {
+  border-radius: 0;
+  height: 35px;
+  width: 100% !important;
+}
+
+textarea.form-control {
+  height: 125px;
+}
+
+.btn-blue {
+  background: @color;
+  color: #fff;
+  padding: 0;
+  text-align: center;
+  height: 35px;
+  font-size: 17px;
+  line-height: 1em;
+  font-weight: 300;
+  width: 100%;
+  outline: none;
+  border: 0;
+  border-radius: 0;
+}
+
 header {
   background: #2f2f2f url(../img/hexellence.png);
   min-width: 1210px;
+
+  .fixed-menu {
+    position: fixed;
+    ul {
+      li {
+        a {
+          padding: 10px 0 5px;
+          font-size: 90%;
+        }
+      }
+    }
+  }
 
   .top-line {
     padding: 10px;
     background: #7f7f7f;
     color: #313030;
+    width: 100%;
+    z-index: 50;
     box-shadow: @shadow;
+    position: fixed;
     ul {
       overflow: hidden;
       display: flex;
@@ -165,6 +274,7 @@ header {
 
 .top-menu {
   color: #fff;
+  z-index: 50;
   font-size: 25px;
   text-transform: uppercase;
   background: #484848;
@@ -380,10 +490,13 @@ header {
     font-weight: 300;
     letter-spacing: -1px;
   }
-  p,li,span {
+  p,li {
     font-weight: 200;
     font-size: 17px;
     letter-spacing: -0.5px;
+  }
+  strong {
+    font-weight: 500 !important;
   }
 }
 
@@ -399,7 +512,7 @@ header {
     color: @color;
     font-size: 7px;
     position: relative;
-    margin: 10px 10px 0 20px;
+    margin: 10px 20px 0 20px;
   }
 }
 
@@ -418,15 +531,12 @@ header {
         font-size: 17px;
         font-weight: 200;
         letter-spacing: -.5px;
-        span {
-
-        }
       }
     }
   }
 }
 
-.carousel-complects {
+.carousel-complects, .products-block {
   margin-right: -12px;
   margin-left: -12px;
   overflow: hidden;
@@ -549,6 +659,11 @@ header {
     .block-title {
       overflow: hidden;
       padding: 10px;
+      padding-bottom: 0;
+      margin-bottom: 10px;
+      height: 60px;
+      display: block;
+      box-sizing: border-box;
       p {
         font-size: 17px;
         font-weight: 200;
@@ -607,6 +722,31 @@ header {
   }
 }
 
+.products-block {
+  display: block;
+  padding: 0;
+  .item {
+    background: none;
+    margin: 0;
+    margin-bottom: 25px;
+    &:hover {
+      box-shadow: none;
+    }
+    .block-title {
+      margin: 0;
+    }
+    .block-price {
+      p {
+        border-top: 1px solid rgb(255, 255, 255);
+        border-bottom: 0 !important;
+      }
+    }
+  }
+  .block-title, .block-price {
+    background: #313131;
+  }
+}
+
 .service-block {
   display: flex;
   width: 100%;
@@ -662,6 +802,7 @@ header {
     color: #fff;
     overflow: hidden;
     box-shadow: @shadow;
+    cursor: pointer;
     .news-img {
       float: left;
       margin-right: 20px;
@@ -677,6 +818,9 @@ header {
       p {
         font-weight: 200;
         line-height: 1.2em;
+        &:hover {
+          color: @color;
+        }
       }
     }
 
@@ -770,6 +914,10 @@ header {
 
     }
   }
+}
+
+.partners-carousel {
+  display: none;
 }
 
 #trust {
@@ -901,6 +1049,11 @@ footer {
   text-align: center;
 }
 
+
+.pagination {
+  margin: 0;
+}
+
 .ui-tooltip {
   background: @color;
   padding: 3px 10px;
@@ -923,44 +1076,362 @@ footer {
 
 .modal_div {
   width: 300px;
-  height: 300px; /* Рaзмеры дoлжны быть фиксирoвaны */
   border-radius: 5px;
-  border: 3px #000 solid;
+  border: 3px darken(@color, 10%) solid;
   background: #fff;
-  position: fixed; /* чтoбы oкнo былo в видимoй зoне в любoм месте */
-  top: 45%; /* oтступaем сверху 45%, oстaльные 5% пoдвинет скрипт */
-  left: 50%; /* пoлoвинa экрaнa слевa */
+  position: fixed;
+  top: 45%;
+  left: 50%;
   margin-top: -150px;
-  margin-left: -150px; /* тут вся мaгия центрoвки css, oтступaем влевo и вверх минус пoлoвину ширины и высoты сooтветственнo =) */
-  display: none; /* в oбычнoм сoстoянии oкнa не дoлжнo быть */
-  opacity: 0; /* пoлнoстью прoзрaчнo для aнимирoвaния */
-  z-index: 5; /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
-  padding: 20px 10px;
+  margin-left: -150px;
+  display: none;
+  opacity: 0;
+  z-index: 5;
+  padding: 0 10px;
+  h3 {
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+  .form-control2 {
+    margin-bottom: 10px;
+    .itext {
+      width: 100%;
+      padding: 3px 8px;
+      outline: none;
+      height: 35px;
+    }
+  }
 }
-/* Кнoпкa зaкрыть для тех ктo в тaнке) */
+
 .modal_close {
   width: 21px;
   height: 21px;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 0;
+  right: 0;
   cursor: pointer;
   display: block;
+  color: #34C6F4;
+  font-size: 20px;
 }
 /* Пoдлoжкa */
 #overlay {
-  z-index:3; /* пoдлoжкa дoлжнa быть выше слoев элементoв сaйтa, нo ниже слoя мoдaльнoгo oкнa */
-  position:fixed; /* всегдa перекрывaет весь сaйт */
-  background-color:#000; /* чернaя */
-  opacity:0.8; /* нo немнoгo прoзрaчнa */
-  -moz-opacity:0.8; /* фикс прозрачности для старых браузеров */
+  z-index:3;
+  position:fixed;
+  background-color:darken(@color, 20%);
+  opacity:0.8;
+  -moz-opacity:0.8;
   filter:alpha(opacity=80);
   width:100%;
-  height:100%; /* рaзмерoм вo весь экрaн */
-  top:0; /* сверху и слевa 0, oбязaтельные свoйствa! */
+  height:100%;
+  top:0;
   left:0;
   cursor:pointer;
-  display:none; /* в oбычнoм сoстoянии её нет) */
+  display:none;
+}
+
+
+.social-block {
+  a {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    margin-right: 8px;
+    border-radius: 50%;
+    font-size: 12px;
+    text-align: center;
+    color: #484848;
+    padding: 1px 1px 0 0;
+  }
+}
+
+.gallery-content {
+  overflow: hidden;
+}
+
+.gallery-block {
+  clear: both;
+  margin-bottom: 30px;
+  overflow: hidden;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .gallery-img {
+    float: left;
+    margin-right: 30px;
+    max-width: 172px;
+    overflow: hidden;
+    display: block;
+    img {
+      width: auto;
+      max-height: 100%;
+      margin-left: -30px;
+      transition: all 0.3s ease;
+      opacity: 0.5;
+    }
+    &.loaded {
+      img {
+        margin-left: 0;
+        opacity: 1;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+
+  .gallery-desc {
+    vertical-align: top;
+    h3 {
+      font-size: 20px;
+      color: @color;
+      margin-top: 0;
+    }
+    p {
+      font-size: 16px;
+      color: #e3e3e3;
+      a {
+        font-weight: 500;
+        font-size: 16px;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+#products {
+.product_block,
+.product_block2 {
+  img {
+    max-width: 100%;
+  }
+  &:nth-child(4n+4) {
+    clear: right;
+  }
+  &:nth-child(4n+5) {
+    clear: left;
+  }
+}
+}
+
+/*Карточка товара*/
+
+.block-img {
+  width: 30%;
+  min-width: 270px;
+  float: left;
+  display: inline-block;
+  margin-right: 30px;
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  div#thumbs {
+    margin-top: 30px;
+    li {
+      display: inline-block;
+      float: left;
+      margin-right: 30px;
+      margin-bottom: 30px;
+      &:nth-child(3n+3) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.product-price {
+  .shk-but {
+    border: 0;
+    background: #34c6f4;
+    color: #fff;
+    font-size: 18px;
+    padding: 4px 30px;
+    outline: 0;
+    position: relative;
+    cursor: pointer;
+    margin: 0;
+  }
+  .price-style {
+    font-size: 50px;
+  }
+}
+
+.buy-btn {
+  .shk-but {
+    border: 0;
+    background: @color;
+    width: 100%;
+    margin: 0;
+    color: #fff;
+    font-size: 20px;
+    padding: 2px 0;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+    &:hover {
+      background: darken(@color, 25%);
+    }
+    &:active {
+      box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+.catalog-sound {
+  .product_sound_block {
+    margin-top: 30px;
+    .product_block {
+      overflow: hidden;
+      clear: both;
+      display: table;
+      padding-bottom: 30px;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 28px;
+      &:last-child {
+        padding-bottom: 0;
+        border-bottom: 0;
+      }
+      .img-block {
+        display: block;
+        width: 155px;
+        overflow: hidden;
+        margin-right: 30px;
+        vertical-align: top;
+        position: relative;
+        z-index: 10;
+        cursor: pointer;
+        &:hover:before {
+          opacity: 1;
+        }
+        img {
+          max-width: 100%;
+        }
+          .icon-sale, .icon-hot, .icon-new, .icon-pro {
+            position: absolute;
+            left: -65px;
+            top: -10px;
+            width: 100px;
+            background: #eba714;
+            transform: rotate(-45deg);
+            padding: 40px 70px 5px;
+            text-align: center;
+            font-size: 16px;
+            color: #fff;
+          }
+          .icon-hot {
+            background: #eb6014;
+          }
+          .icon-new {
+            background: #bbeb14;
+          }
+          .icon-pro {
+            background: @color;
+          }
+          &:before {
+            content: '';
+            background: rgba(0, 0, 0, 0.7);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            display: block;
+            transition: all 0.3s;
+          }
+          img {
+            width: 100%;
+            height: auto;
+          }
+          .icon-opacity {
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            left: 0;
+            right: 0;
+            margin: 50% auto;
+            margin-top: calc(50% - 8px);
+            opacity: 0;
+            transition: opacity .3s;
+            span {
+              display: block;
+            }
+          }
+      }
+      .desc {
+        display: table-cell;
+        vertical-align: top;
+        font-weight: 400;
+        color: #e3e3e3;
+        .price {
+          font-size: 20px;
+          margin: 10px 0;
+          width: 40%;
+          clear: both;
+          color: #fff;
+          float: left;
+        }
+        p {
+          font-size: 15px;
+        }
+        .exist {
+          display: inline-block;
+          float: left;
+          font-size: 16px;
+          margin-top: 10px;
+          line-height: 1.7em;
+          color: #fff;
+
+          i {
+            font-size: 9px;
+            color: @color;
+            margin-right: 10px;
+            float: left;
+            margin-top: 10px;
+          }
+          &.red {
+            i {
+              color: red;
+            }
+          }
+        }
+        .title-desc {
+          line-height: 1.2em;
+          margin: 0;
+          margin-bottom: 15px;
+          a {
+            font-weight: 400;
+            color: @color;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+  .ui-accordion-header {
+    outline: none;
+    padding: 5px 25px;
+    border-radius: 10px;
+    background: #202020;
+    line-height: 1em;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    &:before {
+      content: '\f054';
+      margin-right: 15px;
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    &.ui-state-active {
+      &:before {
+        content: '\f078';
+      }
+    }
+  }
 }
 
 @media all and (max-width: 1200px) {
@@ -977,4 +1448,15 @@ footer {
   #testimonials {
     padding: 50px 0;
   }
+
+  .top-menu {
+    ul {
+      li {
+        a {
+          font-size: 90%;
+        }
+      }
+    }
+  }
 }
+

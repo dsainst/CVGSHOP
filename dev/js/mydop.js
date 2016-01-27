@@ -1,6 +1,14 @@
 /**
  * Created by Сергей on 28.10.2015.
  */
+
+$(function() {
+    $( ".catalog-sound" ).accordion({
+        heightStyle: "content",
+        collapsible: true
+    });
+});
+
 jQuery(document).ready(function($){
     $(document).tooltip();
     window.onload = function() {
@@ -24,15 +32,17 @@ jQuery(document).ready(function($){
                 }
 
             $(".airSticky").stick_in_parent({
-                parent: ".airSticky__stop-block"
+                parent: ".airSticky__stop-block",
+                offset_top: 95
             });
             $(".airSticky2").stick_in_parent({
-                parent: ".airSticky__stop-block"
+                parent: ".airSticky__stop-block",
+                offset_top: 95
             });
         }
     };
 
-    /* зaсунем срaзу все элементы в переменные, чтoбы скрипту не прихoдилoсь их кaждый рaз искaть при кликaх */
+    /* !!!!!!!MODAL WINDOW!!!!!!!!! */
     var overlay = $('#overlay'); // пoдлoжкa, дoлжнa быть oднa нa стрaнице
     var open_modal = $('.open_modal'); // все ссылки, кoтoрые будут oткрывaть oкнa
     var close = $('.modal_close, #overlay'); // все, чтo зaкрывaет мoдaльнoе oкнo, т.е. крестик и oверлэй-пoдлoжкa
@@ -83,7 +93,23 @@ jQuery(document).ready(function($){
     })(this));
 
     var show = true;
+    /* ----------- FIXED TOP MENU BEGIN -------------- */
+    var h_hght = 174, // высота шапки
+        h_mrg = 48;    // отступ когда шапка уже не видна
+
     $(window).scroll(function() {
+        var top = $(this).scrollTop();
+        var elem = $('.top-menu');
+            //elem2 = $('.top-line');
+        //if (top>0) elem2.addClass('fixed-menu'); else elem2.removeClass('fixed-menu');
+        if (top+h_mrg < h_hght) {
+            elem.css('top', (h_hght-top));
+            elem.removeClass('fixed-menu');
+        } else {
+            elem.css('top', h_mrg);
+            elem.addClass('fixed-menu');
+        }
+        /* ----------- FIXED TOP MENU END -------------- */
         if (!show) return false;
         $('.animateNum').each(function() {
             var imagePos = $(this).offset().top,
@@ -145,6 +171,8 @@ jQuery(document).ready(function($){
         dots: false,
         infinite: true,
         speed: 300,
+        autoplay: true,
+        autoplaySpeed: 2000,
         arrows: true,
         slidesToShow: 7,
         centerMode: false,

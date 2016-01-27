@@ -13,7 +13,7 @@ var gulp = require('gulp'),
 
 // less process...
 gulp.task('less', function () {
-    return gulp.src('dev/css/*.less')
+    return gulp.src('dev/css/**/*.less')
         .pipe(less())
         .pipe(gulp.dest('dev/css/'));
 });
@@ -59,7 +59,7 @@ gulp.task('js', function () {
 
 // css process...
 gulp.task('default', ['less'], function () {
-    gulp.src('dev/css/*.css')
+    gulp.src('dev/css/**/*.css')
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false
@@ -74,7 +74,7 @@ gulp.task('default', ['less'], function () {
 // watcher must always is on
 gulp.task('watch', function () {
     livereload.listen();
-    gulp.watch('dev/css/*.less', ['default'])
+    gulp.watch('dev/css/**/*.less', ['default'])
     gulp.watch('dev/js/*.js', ['js'])
     gulp.watch('dev/index.html', ['rev_append'])
     gulp.watch('dev/img/*', ['sprite'])
