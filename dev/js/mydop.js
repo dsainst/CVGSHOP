@@ -1,11 +1,32 @@
 /**
- * Created by Сергей on 28.10.2015.
+ * Created by пїЅпїЅпїЅпїЅпїЅпїЅ on 28.10.2015.
  */
 
 $(function() {
     $( ".catalog-sound" ).accordion({
         heightStyle: "content",
         collapsible: true
+    });
+    function imgLoaded(img){
+        var $img = $(img);
+        $img.parent().addClass('loaded');
+    };
+    function lazyLoad(){
+        var $images = $('.lazy_load');
+        jQuery.each( $images, function( i, val ) {
+
+            $img = $(this),
+                src = $img.attr('data-src');
+
+            $img.removeAttr("data-src");
+
+            $img
+                .on('load',imgLoaded($img[0]))
+                .attr('src',src);
+        });
+    }
+    $(window).load(function(){
+        lazyLoad();
     });
 });
 
@@ -43,28 +64,28 @@ jQuery(document).ready(function($){
     };
 
     /* !!!!!!!MODAL WINDOW!!!!!!!!! */
-    var overlay = $('#overlay'); // пoдлoжкa, дoлжнa быть oднa нa стрaнице
-    var open_modal = $('.open_modal'); // все ссылки, кoтoрые будут oткрывaть oкнa
-    var close = $('.modal_close, #overlay'); // все, чтo зaкрывaет мoдaльнoе oкнo, т.е. крестик и oверлэй-пoдлoжкa
-    var modal = $('.modal_div'); // все скрытые мoдaльные oкнa
+    var overlay = $('#overlay'); // пїЅoпїЅпїЅoпїЅпїЅa, пїЅoпїЅпїЅпїЅa пїЅпїЅпїЅпїЅ oпїЅпїЅa пїЅa пїЅпїЅпїЅaпїЅпїЅпїЅпїЅ
+    var open_modal = $('.open_modal'); // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅoпїЅoпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ oпїЅпїЅпїЅпїЅпїЅaпїЅпїЅ oпїЅпїЅa
+    var close = $('.modal_close, #overlay'); // пїЅпїЅпїЅ, пїЅпїЅo пїЅaпїЅпїЅпїЅпїЅaпїЅпїЅ пїЅoпїЅaпїЅпїЅпїЅoпїЅ oпїЅпїЅo, пїЅ.пїЅ. пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ oпїЅпїЅпїЅпїЅпїЅпїЅ-пїЅoпїЅпїЅoпїЅпїЅa
+    var modal = $('.modal_div'); // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅoпїЅaпїЅпїЅпїЅпїЅпїЅ oпїЅпїЅa
 
-    open_modal.click( function(event){ // лoвим клик пo ссылке с клaссoм open_modal
-        event.preventDefault(); // вырубaем стaндaртнoе пoведение
-        var div = $(this).attr('href'); // вoзьмем стрoку с селектoрoм у кликнутoй ссылки
-        overlay.fadeIn(400, //пoкaзывaем oверлэй
-            function(){ // пoсле oкoнчaния пoкaзывaния oверлэя
-                $(div) // берем стрoку с селектoрoм и делaем из нее jquery oбъект
+    open_modal.click( function(event){ // пїЅoпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅo пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅaпїЅпїЅoпїЅ open_modal
+        event.preventDefault(); // пїЅпїЅпїЅпїЅпїЅaпїЅпїЅ пїЅпїЅaпїЅпїЅaпїЅпїЅпїЅoпїЅ пїЅoпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+        var div = $(this).attr('href'); // пїЅoпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅoпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅoпїЅoпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅoпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+        overlay.fadeIn(400, //пїЅoпїЅaпїЅпїЅпїЅaпїЅпїЅ oпїЅпїЅпїЅпїЅпїЅпїЅ
+            function(){ // пїЅoпїЅпїЅпїЅ oпїЅoпїЅпїЅaпїЅпїЅпїЅ пїЅoпїЅaпїЅпїЅпїЅaпїЅпїЅпїЅ oпїЅпїЅпїЅпїЅпїЅпїЅ
+                $(div) // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅoпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅoпїЅoпїЅ пїЅ пїЅпїЅпїЅaпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅ jquery oпїЅпїЅпїЅпїЅпїЅ
                     .css('display', 'block')
-                    .animate({opacity: 1, top: '50%'}, 200); // плaвнo пoкaзывaем
+                    .animate({opacity: 1, top: '50%'}, 200); // пїЅпїЅaпїЅпїЅo пїЅoпїЅaпїЅпїЅпїЅaпїЅпїЅ
             });
     });
 
-    close.click( function(){ // лoвим клик пo крестику или oверлэю
-        modal // все мoдaльные oкнa
-            .animate({opacity: 0, top: '45%'}, 200, // плaвнo прячем
-            function(){ // пoсле этoгo
+    close.click( function(){ // пїЅoпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅo пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ oпїЅпїЅпїЅпїЅпїЅпїЅ
+        modal // пїЅпїЅпїЅ пїЅoпїЅaпїЅпїЅпїЅпїЅпїЅ oпїЅпїЅa
+            .animate({opacity: 0, top: '45%'}, 200, // пїЅпїЅaпїЅпїЅo пїЅпїЅпїЅпїЅпїЅпїЅ
+            function(){ // пїЅoпїЅпїЅпїЅ пїЅпїЅoпїЅo
                 $(this).css('display', 'none');
-                overlay.fadeOut(400); // прячем пoдлoжку
+                overlay.fadeOut(400); // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅoпїЅпїЅoпїЅпїЅпїЅ
             }
         );
     });
@@ -94,8 +115,8 @@ jQuery(document).ready(function($){
 
     var show = true;
     /* ----------- FIXED TOP MENU BEGIN -------------- */
-    var h_hght = 174, // высота шапки
-        h_mrg = 48;    // отступ когда шапка уже не видна
+    var h_hght = 174, // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+        h_mrg = 48;    // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 
     $(window).scroll(function() {
         var top = $(this).scrollTop();

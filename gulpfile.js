@@ -1,4 +1,4 @@
-//подключаем необходимые плагины
+//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 var gulp = require('gulp'),
     less = require('gulp-less'),
     autoprefixer = require('gulp-autoprefixer'),
@@ -9,7 +9,9 @@ var gulp = require('gulp'),
     livereload = require('gulp-livereload'),
     spritesmith = require('gulp.spritesmith'),
     rename = require('gulp-rename'),
-    uglify = require('gulp-uglify');
+    uglify = require('gulp-uglify'),
+    gutil = require('gulp-util'),
+    ftp = require('gulp-ftp');
 
 // less process...
 gulp.task('less', function () {
@@ -69,15 +71,28 @@ gulp.task('default', ['less'], function () {
         .pipe(gulp.dest('tpl/css/'))
         .pipe(livereload());
 });
-
+gulp.task('upload', function () {
+    return gulp.src('tpl/css/style.min.css')
+        .pipe(ftp({
+            host: 'spb47.ru',
+            user: 'tbobtzu_boss',
+            pass: 'QS6i2SqM',
+            remotePath: '/tpl/css/'
+        }))
+        // you need to have some kind of stream after gulp-ftp to make sure it's flushed
+        // this can be a gulp plugin, gulp.dest, or any kind of stream
+        // here we use a passthrough stream
+        .pipe(gutil.noop());
+});
 
 // watcher must always is on
 gulp.task('watch', function () {
-    livereload.listen();
-    gulp.watch('dev/css/**/*.less', ['default'])
-    gulp.watch('dev/js/*.js', ['js'])
-    gulp.watch('dev/index.html', ['rev_append'])
-    gulp.watch('dev/img/*', ['sprite'])
-    gulp.watch('dev/img/svg/*', ['svg_sprite'])
-    gulp.watch('dev/image/*', ['image'])
+    //livereload.listen();
+    gulp.watch('dev/css/**/*.less', ['default']);
+    gulp.watch('dev/js/*.js', ['js']);
+    gulp.watch('dev/index.html', ['rev_append']);
+    gulp.watch('dev/img/*', ['sprite']);
+    gulp.watch('dev/img/svg/*', ['svg_sprite']);
+    gulp.watch('dev/image/*', ['image']);
+    gulp.watch('dev/css/*', ['upload']);
 })

@@ -139,6 +139,71 @@ textarea.form-control {
   border-radius: 0;
 }
 
+.shop-cart-head {
+  b {
+    font-size:20px;
+  }
+}
+
+#shopOrderForm {
+  tr {
+    td {
+      padding: 6px 10px;
+      input,select {
+        width:100%;
+        height: 26px;
+        box-sizing: border-box;
+        color: #3B3B3B;
+        border: 0;
+        padding: 2px 6px;
+      }
+      select {
+        cursor: pointer;
+      }
+      .button {
+        background: #34C6F4;
+        border: 0;
+        cursor: pointer;
+        border-radius: 0;
+        outline: none;
+        color: #fff;
+        &:hover {
+          background: darken(@color, 25%);
+        }
+        &:active {
+          box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+      }
+
+      textarea {
+        padding: 2px 6px;
+        width:100%;
+        box-sizing: border-box;
+        color: #3B3B3B;
+        resize: none;
+      }
+    }
+  }
+}
+
+.shk_count_button, #shk_buttons .shk-but  {
+  &:hover {
+    background: darken(@color, 25%);
+  }
+  &:active {
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+}
+
+tr.cart-order {
+  border-bottom: 1px solid #d3d3d3;
+  td {
+    padding: 5px;
+    font-size: 16px;
+    font-weight:300;
+  }
+}
+
 header {
   background: #2f2f2f url(../img/hexellence.png);
   min-width: 1210px;
@@ -657,11 +722,8 @@ header {
       }
     }
     .block-title {
-      overflow: hidden;
       padding: 10px;
-      padding-bottom: 0;
       margin-bottom: 10px;
-      height: 60px;
       display: block;
       box-sizing: border-box;
       p {
@@ -669,6 +731,8 @@ header {
         font-weight: 200;
         line-height: 16px;
         margin-bottom: 0;
+        height: 50px;
+        overflow: hidden;
       }
     }
 
@@ -1220,6 +1284,7 @@ footer {
   float: left;
   display: inline-block;
   margin-right: 30px;
+  margin-bottom: 20px;
   img {
     max-width: 100%;
     height: auto;
@@ -1230,7 +1295,7 @@ footer {
       display: inline-block;
       float: left;
       margin-right: 30px;
-      margin-bottom: 30px;
+      margin-bottom: 10px;
       &:nth-child(3n+3) {
         margin-right: 0;
       }
@@ -1252,6 +1317,9 @@ footer {
   }
   .price-style {
     font-size: 50px;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 20px;
   }
 }
 
@@ -1369,6 +1437,7 @@ footer {
           clear: both;
           color: #fff;
           float: left;
+          font-weight: bold;
         }
         p {
           font-size: 15px;
@@ -1380,6 +1449,7 @@ footer {
           margin-top: 10px;
           line-height: 1.7em;
           color: #fff;
+          font-weight: bold;
 
           i {
             font-size: 9px;
@@ -1429,6 +1499,132 @@ footer {
     &.ui-state-active {
       &:before {
         content: '\f078';
+      }
+    }
+  }
+}
+
+.discount {
+  overflow: hidden;
+  margin-top: 20px;
+  .discount-image {
+    float: left;
+    border-radius: 50%;
+    background: @color;
+    padding: 10px;
+    margin-right: 10px;
+  }
+  .discount-title {
+    color: @color;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 20px;
+    height: 65px;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.product-page {
+  .instruc {
+    margin-bottom: 25px;
+    img {
+      margin-right: 6px;
+    }
+    a {
+      font-size:18px;
+      letter-spacing: -.5px;
+    }
+  }
+  #tabs {
+    .ui-tabs-nav {
+      overflow: hidden;
+      clear: both;
+      width:100%;
+      li {
+        float: left;
+        width: 50%;
+        padding-bottom: 4px;
+        &:nth-child(2) {
+          padding-left: 4px;
+        }
+        a {
+          text-decoration: none;
+          background: #313131;
+          padding: 14px 25px;
+          display: block;
+          &:active,&:focus {
+            color: @color;
+            text-decoration: none;
+          }
+        }
+        &.ui-tabs-active {
+          padding-bottom: 0;
+          a {
+            color: @color;
+          }
+        }
+      }
+
+    }
+    .ui-tabs-panel {
+      background: rgb(49, 49, 49) none repeat scroll 0% 0%;
+      padding: 30px 40px;
+      line-height: 1.3em;
+      font-size: 16px;
+    }
+  }
+  .zebra {
+    table {
+      width:100%;
+      tr {
+        border-bottom: 1px solid #3D3D3D;
+        td {
+          padding: 7px 13px;
+          &:nth-child(2) {
+            font-weight:300;
+            color: #e3e3e3;
+          } 
+        }
+      }
+    }
+  }
+  .description {
+    .social {
+      margin-bottom: 25px;
+    }
+    p {
+      font-size:16px;
+    }
+    .artikul {
+      font-weight:600;
+      line-height: 1em;
+      margin-bottom: 15px;
+    }
+    .exist {
+      font-size: 16px;
+      margin-top: 10px;
+      line-height: 1.7em;
+      color: #fff;
+      font-weight: bold;
+
+      i {
+        font-size: 9px;
+        color: @color;
+        margin-right: 10px;
+        float: left;
+        margin-top: 10px;
+      }
+      &.red {
+        i {
+          color: red;
+        }
+      }
+    }
+    .product-price {
+      margin-bottom: 20px;
+      .shk-but {
+        padding: 4px 30px 8px;
       }
     }
   }
