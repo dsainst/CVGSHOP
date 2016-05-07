@@ -595,6 +595,41 @@ header .cart-block p {
   height: auto;
   cursor: pointer;
 }
+.carousel-complects .item.item-buy .block-price .exist,
+.products-block .item.item-buy .block-price .exist {
+  display: inline-block;
+  font-size: 12px;
+  margin-top: 5px;
+  line-height: 1.7em;
+  color: #34c6f4;
+  font-weight: 700;
+}
+.carousel-complects .item.item-buy fieldset,
+.products-block .item.item-buy fieldset {
+  position: relative;
+}
+.carousel-complects .item.item-buy .product-price,
+.products-block .item.item-buy .product-price {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+}
+.carousel-complects .item.item-buy .product-price .shk-but,
+.products-block .item.item-buy .product-price .shk-but {
+  width: 100%;
+  text-align: center;
+}
+.carousel-complects .item.item-buy .product-price .shk-but .icon-shopping-1.fr20,
+.products-block .item.item-buy .product-price .shk-but .icon-shopping-1.fr20 {
+  margin: 0 auto;
+  float: none;
+}
+.carousel-complects .item.item-buy:hover .product-price,
+.products-block .item.item-buy:hover .product-price {
+  display: block;
+}
 .carousel-complects .item .block-image,
 .products-block .item .block-image {
   overflow: hidden;
@@ -1268,7 +1303,7 @@ footer ul li p {
   z-index: 10;
   cursor: pointer;
 }
-.catalog-sound .product_sound_block .product_block .img-block:hover:before {
+.catalog-sound .product_sound_block .product_block .img-block:hover .img-wrap:before {
   opacity: 1;
 }
 .catalog-sound .product_sound_block .product_block .img-block img {
@@ -1281,6 +1316,7 @@ footer ul li p {
   position: absolute;
   left: -65px;
   top: -10px;
+  z-index: 1;
   width: 100px;
   background: #eba714;
   transform: rotate(-45deg);
@@ -1298,7 +1334,7 @@ footer ul li p {
 .catalog-sound .product_sound_block .product_block .img-block .icon-pro {
   background: #34c6f4;
 }
-.catalog-sound .product_sound_block .product_block .img-block:before {
+.catalog-sound .product_sound_block .product_block .img-block .img-wrap:before {
   content: '';
   background: rgba(0, 0, 0, 0.7);
   width: 100%;

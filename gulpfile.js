@@ -11,7 +11,7 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     uglify = require('gulp-uglify'),
     gutil = require('gulp-util'),
-    ftp = require('gulp-ftp');
+    sftp = require('gulp-sftp');
 
 // less process...
 gulp.task('less', function () {
@@ -73,10 +73,10 @@ gulp.task('default', ['less'], function () {
 });
 gulp.task('upload', function () {
     return gulp.src('tpl/css/style.min.css')
-        .pipe(ftp({
+        .pipe(sftp({
             host: 'spb47.ru',
             user: 'tbobtzu_boss',
-            pass: 'QS6i2SqM',
+            pass: 'gjohnzgc',
             remotePath: '/tpl/css/'
         }))
         // you need to have some kind of stream after gulp-ftp to make sure it's flushed
@@ -94,5 +94,4 @@ gulp.task('watch', function () {
     gulp.watch('dev/img/*', ['sprite']);
     gulp.watch('dev/img/svg/*', ['svg_sprite']);
     gulp.watch('dev/image/*', ['image']);
-    gulp.watch('dev/css/*', ['upload']);
 })

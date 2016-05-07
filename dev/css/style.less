@@ -655,6 +655,41 @@ header {
     color: #fff;
     height: auto;
     cursor: pointer;
+    &.item-buy {
+      .block-price {
+        .exist {
+          display: inline-block;
+          font-size: 12px;
+          margin-top: 5px;
+          line-height: 1.7em;
+          color: #34c6f4;
+          font-weight: 700;
+        }
+      }
+      fieldset {
+        position: relative;
+      }
+      .product-price {
+        display: none;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        .shk-but {
+          width: 100%;
+          text-align: center;
+          .icon-shopping-1.fr20 {
+            margin: 0 auto;
+            float: none;
+          }
+        }
+      }
+      &:hover {
+        .product-price {
+          display: block;
+        }
+      }
+    }
     .block-image {
       overflow: hidden;
       position: relative;
@@ -1367,7 +1402,7 @@ footer {
         position: relative;
         z-index: 10;
         cursor: pointer;
-        &:hover:before {
+        &:hover .img-wrap:before {
           opacity: 1;
         }
         img {
@@ -1377,6 +1412,7 @@ footer {
             position: absolute;
             left: -65px;
             top: -10px;
+            z-index: 1;
             width: 100px;
             background: #eba714;
             transform: rotate(-45deg);
@@ -1394,7 +1430,7 @@ footer {
           .icon-pro {
             background: @color;
           }
-          &:before {
+          .img-wrap:before {
             content: '';
             background: rgba(0, 0, 0, 0.7);
             width: 100%;
