@@ -3,10 +3,6 @@
  */
 
 $(function() {
-    $( ".catalog-sound" ).accordion({
-        heightStyle: "content",
-        collapsible: true
-    });
     function imgLoaded(img){
         var $img = $(img);
         $img.parent().addClass('loaded');
@@ -31,6 +27,10 @@ $(function() {
 });
 
 jQuery(document).ready(function($){
+    $( ".catalog-sound" ).accordion({
+        heightStyle: "content",
+        collapsible: true
+    });
     $(document).tooltip();
     window.onload = function() {
         if ($(window).width()>'1220') {
