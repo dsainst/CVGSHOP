@@ -29,7 +29,8 @@ $(function() {
 jQuery(document).ready(function($){
     $( ".catalog-sound" ).accordion({
         heightStyle: "content",
-        collapsible: true
+        collapsible: true,
+        active: false
     });
     $(document).tooltip();
     window.onload = function() {

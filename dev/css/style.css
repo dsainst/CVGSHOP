@@ -1302,6 +1302,9 @@ footer ul li p {
   padding-bottom: 0;
   border-bottom: 0;
 }
+.product_sound_block .product_block .intro {
+  text-align: justify;
+}
 .product_sound_block .product_block .img-block {
   display: block;
   width: 155px;
@@ -1462,6 +1465,15 @@ footer ul li p {
   height: 65px;
   display: table-cell;
   vertical-align: middle;
+}
+.ui-accordion {
+  overflow: hidden;
+}
+h3.ui-accordion-header {
+  white-space: nowrap;
+}
+.product-page .intro {
+  text-align: justify;
 }
 .product-page .instruc {
   margin-bottom: 25px;
