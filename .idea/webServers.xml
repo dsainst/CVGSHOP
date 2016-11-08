@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="6dac2253-4986-4fb1-9263-5c4663e77c60" name="lepus(spb47.ru)" url="http://vh3.lepus.su">
+        <fileTransfer host="vh3.lepus.su" port="21" password="dfe8dff8dfeedf9adfc1dff0dfc6dfcc" username="tbobtzu_boss">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
