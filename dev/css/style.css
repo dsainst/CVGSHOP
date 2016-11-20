@@ -1440,6 +1440,8 @@ footer ul li p {
 }
 .product_sound_block .product_block .intro {
   text-align: justify;
+  height: 120px;
+  overflow: hidden;
 }
 .product_sound_block .product_block .img-block {
   display: block;
@@ -1612,6 +1614,8 @@ h3.ui-accordion-header {
   text-align: justify;
 }
 .product-page .instruc {
+  float: left;
+  margin-right: 30px;
   margin-bottom: 25px;
 }
 .product-page .instruc img {
@@ -1690,6 +1694,12 @@ h3.ui-accordion-header {
 .product-page .complect .block-desc .block-title p {
   font-weight: 500;
   font-size: 17px;
+}
+.product-page .description .fl-left {
+  float: left;
+}
+.product-page .description .fl-right {
+  float: right;
 }
 .product-page .description .social {
   margin-bottom: 25px;
